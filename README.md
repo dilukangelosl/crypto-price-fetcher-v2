@@ -112,6 +112,10 @@ interface FetchOptions {
 
 ## Changelog
 
+### v1.0.3
+- Updated repository URLs to match new repo name
+- Improved documentation
+
 ### v1.0.2
 - Moved `viem` to direct dependencies (no manual install required)
 - Updated documentation
@@ -128,7 +132,7 @@ interface FetchOptions {
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a PR.
+Contributions are welcome! Please open an issue or submit a PR on [GitHub](https://github.com/dilukangelosl/crypto-price-fetcher-v2).
 
 ## License
 

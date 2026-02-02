@@ -1,18 +1,18 @@
 {
     "name": "crypto-price-fetcher-v2",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Fetch real-time cryptocurrency prices from DEX pools via public RPCs",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dilukangelosl/crypto-price-fetcher.git"
+        "url": "git+https://github.com/dilukangelosl/crypto-price-fetcher-v2.git"
     },
     "bugs": {
-        "url": "https://github.com/dilukangelosl/crypto-price-fetcher/issues"
+        "url": "https://github.com/dilukangelosl/crypto-price-fetcher-v2/issues"
     },
-    "homepage": "https://github.com/dilukangelosl/crypto-price-fetcher#readme",
+    "homepage": "https://github.com/dilukangelosl/crypto-price-fetcher-v2#readme",
     "exports": {
         ".": {
             "import": "./dist/index.mjs",
