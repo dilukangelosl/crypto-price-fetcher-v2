@@ -1,13 +1,10 @@
 {
-    "name": "@dilukangelosl/crypto-price-fetcher-v2",
+    "name": "crypto-price-fetcher-v2",
     "version": "1.0.4",
     "description": "Fetch real-time cryptocurrency prices from DEX pools via public RPCs",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/dilukangelosl/crypto-price-fetcher-v2.git"
