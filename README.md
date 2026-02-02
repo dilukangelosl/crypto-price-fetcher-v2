@@ -1,7 +1,7 @@
-# crypto-price-fetcher-v2
+# @dilukangelosl/crypto-price-fetcher-v2
 
-[![npm version](https://img.shields.io/npm/v/crypto-price-fetcher-v2.svg)](https://www.npmjs.com/package/crypto-price-fetcher-v2)
-[![npm downloads](https://img.shields.io/npm/dm/crypto-price-fetcher-v2.svg)](https://www.npmjs.com/package/crypto-price-fetcher-v2)
+[![npm version](https://img.shields.io/npm/v/@dilukangelosl/crypto-price-fetcher-v2.svg)](https://www.npmjs.com/package/@dilukangelosl/crypto-price-fetcher-v2)
+[![npm downloads](https://img.shields.io/npm/dm/@dilukangelosl/crypto-price-fetcher-v2.svg)](https://www.npmjs.com/package/@dilukangelosl/crypto-price-fetcher-v2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Fetch real-time cryptocurrency prices directly from DEX pools via public RPCs. **No API keys required.**
@@ -25,17 +25,18 @@ Fetch real-time cryptocurrency prices directly from DEX pools via public RPCs. *
 ## Installation
 
 ```bash
-npm install crypto-price-fetcher-v2
+npm install @dilukangelosl/crypto-price-fetcher-v2
 # or
-yarn add crypto-price-fetcher-v2
+yarn add @dilukangelosl/crypto-price-fetcher-v2
 # or
-bun add crypto-price-fetcher-v2
+bun add @dilukangelosl/crypto-price-fetcher-v2
 ```
 
 ## Quick Start
 
 ```typescript
-import { getETHPrice, getBNBPrice, getSOLPrice, getAllPrices } from 'crypto-price-fetcher-v2';
+```typescript
+import { getETHPrice, getBNBPrice, getSOLPrice, getAllPrices } from '@dilukangelosl/crypto-price-fetcher-v2';
 
 // Get individual prices
 const ethPrice = await getETHPrice();
@@ -68,7 +69,7 @@ console.log(prices);
 ### Custom RPC URLs
 
 ```typescript
-import { getETHPrice, getAllPrices } from 'crypto-price-fetcher-v2';
+import { getETHPrice, getAllPrices } from '@dilukangelosl/crypto-price-fetcher-v2';
 
 // Use your own RPC for better reliability
 const ethPrice = await getETHPrice({
@@ -111,6 +112,10 @@ interface FetchOptions {
 - **Solana**: Uses DexScreener's aggregated API which sources data from on-chain DEXes
 
 ## Changelog
+
+### v1.0.4
+- Switched to scoped package name for GitHub Packages support
+- Added support for GitHub Packages registry
 
 ### v1.0.3
 - Updated repository URLs to match new repo name
