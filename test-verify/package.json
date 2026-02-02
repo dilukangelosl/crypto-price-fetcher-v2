@@ -1,0 +1,15 @@
+{
+  "name": "test-package-verify",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "crypto-price-fetcher-v2": "^1.0.4"
+  }
+}

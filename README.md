@@ -112,6 +112,9 @@ interface FetchOptions {
 
 ## Changelog
 
+### v1.0.5
+- Fixed `exports` mapping in `package.json` to correctly resolve imports
+
 ### v1.0.4
 - Improved dependency management
 - Updated documentation
