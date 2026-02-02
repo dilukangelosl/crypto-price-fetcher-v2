@@ -112,6 +112,10 @@ interface FetchOptions {
 
 ## Changelog
 
+### v1.0.1
+- Added repository info for GitHub linking
+- Improved documentation
+
 ### v1.0.0
 - Initial release
 - Support for Ethereum, BSC, Base, and Solana

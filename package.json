@@ -1,6 +1,6 @@
 {
     "name": "crypto-price-fetcher-v2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Fetch real-time cryptocurrency prices from DEX pools via public RPCs",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
