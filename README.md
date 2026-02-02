@@ -1,6 +1,17 @@
-# crypto-price-fetcher
+# crypto-price-fetcher-v2
 
-Fetch real-time cryptocurrency prices from DEX pools via public RPCs. No API keys required.
+[![npm version](https://img.shields.io/npm/v/crypto-price-fetcher-v2.svg)](https://www.npmjs.com/package/crypto-price-fetcher-v2)
+[![npm downloads](https://img.shields.io/npm/dm/crypto-price-fetcher-v2.svg)](https://www.npmjs.com/package/crypto-price-fetcher-v2)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Fetch real-time cryptocurrency prices directly from DEX pools via public RPCs. **No API keys required.**
+
+## Features
+
+- 🔗 **On-chain prices** - Fetches directly from Uniswap V3, PancakeSwap V3, and DexScreener
+- ⚡ **Fast & lightweight** - Single dependency (viem)
+- 🔒 **No API keys** - Uses public RPCs
+- 📦 **TypeScript first** - Full type definitions included
 
 ## Supported Chains
 
@@ -14,17 +25,17 @@ Fetch real-time cryptocurrency prices from DEX pools via public RPCs. No API key
 ## Installation
 
 ```bash
-npm install crypto-price-fetcher viem
+npm install crypto-price-fetcher-v2 viem
 # or
-bun add crypto-price-fetcher viem
+yarn add crypto-price-fetcher-v2 viem
+# or
+bun add crypto-price-fetcher-v2 viem
 ```
 
-## Usage
-
-### Simple Usage
+## Quick Start
 
 ```typescript
-import { getETHPrice, getBNBPrice, getSOLPrice, getAllPrices } from 'crypto-price-fetcher';
+import { getETHPrice, getBNBPrice, getSOLPrice, getAllPrices } from 'crypto-price-fetcher-v2';
 
 // Get individual prices
 const ethPrice = await getETHPrice();
@@ -39,18 +50,25 @@ console.log(`SOL: $${solPrice}`);
 // Get all prices at once
 const prices = await getAllPrices();
 console.log(prices);
-// {
-//   ethereum: { chain: 'ethereum', symbol: 'ETH', price: 2247.63, timestamp: ... },
-//   bsc: { chain: 'bsc', symbol: 'BNB', price: 751.30, timestamp: ... },
-//   base: { chain: 'base', symbol: 'ETH', price: 2245.64, timestamp: ... },
-//   solana: { chain: 'solana', symbol: 'SOL', price: 102.07, timestamp: ... }
-// }
 ```
 
-### With Custom RPC URLs
+## API Reference
+
+### Functions
+
+| Function | Returns | Description |
+|----------|---------|-------------|
+| `getETHPrice(options?)` | `Promise<number>` | ETH price in USD (Ethereum) |
+| `getBNBPrice(options?)` | `Promise<number>` | BNB price in USD (BSC) |
+| `getSOLPrice()` | `Promise<number>` | SOL price in USD (Solana) |
+| `getBaseETHPrice(options?)` | `Promise<number>` | ETH price in USD (Base) |
+| `getPrice(chain, options?)` | `Promise<PriceResult>` | Price for specific chain |
+| `getAllPrices(options?)` | `Promise<Record<ChainId, PriceResult>>` | All chain prices |
+
+### Custom RPC URLs
 
 ```typescript
-import { getETHPrice, getAllPrices } from 'crypto-price-fetcher';
+import { getETHPrice, getAllPrices } from 'crypto-price-fetcher-v2';
 
 // Use your own RPC for better reliability
 const ethPrice = await getETHPrice({
@@ -68,29 +86,6 @@ const prices = await getAllPrices({
     }
 });
 ```
-
-### Get Specific Chain Price
-
-```typescript
-import { getPrice } from 'crypto-price-fetcher';
-
-const result = await getPrice('ethereum');
-console.log(result);
-// { chain: 'ethereum', symbol: 'ETH', price: 2247.63, timestamp: 1706889600000 }
-```
-
-## API Reference
-
-### Functions
-
-| Function | Returns | Description |
-|----------|---------|-------------|
-| `getETHPrice(options?)` | `Promise<number>` | ETH price in USD |
-| `getBNBPrice(options?)` | `Promise<number>` | BNB price in USD |
-| `getSOLPrice()` | `Promise<number>` | SOL price in USD |
-| `getBaseETHPrice(options?)` | `Promise<number>` | Base ETH price in USD |
-| `getPrice(chain, options?)` | `Promise<PriceResult>` | Price for specific chain |
-| `getAllPrices(options?)` | `Promise<Record<ChainId, PriceResult>>` | All chain prices |
 
 ### Types
 
@@ -112,9 +107,21 @@ interface FetchOptions {
 
 ## How It Works
 
-- **EVM Chains**: Uses on-chain Quoter V2 contracts (Uniswap/PancakeSwap) to simulate swaps and get accurate prices
+- **EVM Chains**: Uses on-chain Quoter V2 contracts (Uniswap/PancakeSwap) to simulate swaps and get real-time prices
 - **Solana**: Uses DexScreener's aggregated API which sources data from on-chain DEXes
+
+## Changelog
+
+### v1.0.0
+- Initial release
+- Support for Ethereum, BSC, Base, and Solana
+- Custom RPC URL support
+- TypeScript definitions
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a PR.
 
 ## License
 
-MIT
+MIT © 2024

@@ -1,5 +1,5 @@
 {
-    "name": "crypto-price-fetcher",
+    "name": "crypto-price-fetcher-v2",
     "version": "1.0.0",
     "description": "Fetch real-time cryptocurrency prices from DEX pools via public RPCs",
     "main": "./dist/index.js",
