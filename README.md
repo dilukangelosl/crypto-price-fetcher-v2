@@ -25,11 +25,11 @@ Fetch real-time cryptocurrency prices directly from DEX pools via public RPCs. *
 ## Installation
 
 ```bash
-npm install crypto-price-fetcher-v2 viem
+npm install crypto-price-fetcher-v2
 # or
-yarn add crypto-price-fetcher-v2 viem
+yarn add crypto-price-fetcher-v2
 # or
-bun add crypto-price-fetcher-v2 viem
+bun add crypto-price-fetcher-v2
 ```
 
 ## Quick Start
@@ -111,6 +111,10 @@ interface FetchOptions {
 - **Solana**: Uses DexScreener's aggregated API which sources data from on-chain DEXes
 
 ## Changelog
+
+### v1.0.2
+- Moved `viem` to direct dependencies (no manual install required)
+- Updated documentation
 
 ### v1.0.1
 - Added repository info for GitHub linking
